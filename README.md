@@ -1,6 +1,6 @@
 # Bank tech_test
 
-IRB app which displays account total, allows to withdraw and deposit money, displays statement.
+IRB app which display account total, allow to withdraw and deposit money, display statement.
 
 ## MVP User Stories
 
