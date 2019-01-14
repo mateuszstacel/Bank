@@ -25,12 +25,8 @@ class Account
     @transaction.add(amount, top_up, @balance)
   end
 
-   def check_tran
-     @transaction.transactions_history
-   end
-
    def statement
-     @transaction.statement
+     @transaction.transactions_statement
    end
 
 end

@@ -34,9 +34,5 @@ describe Account do
       subject.top_up(100)
       expect { subject.withdraw(110) }.to raise_error 'Not enough funds!'
     end
-
-
-
   end
-
 end
