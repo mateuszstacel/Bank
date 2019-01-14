@@ -52,16 +52,16 @@ acc = Account.new
 => creates a new account instance
 
 acc.top_up(888)
- => adds funds to account
+ => add money to account
 
 acc.withdraw(137)
- => deducts funds from account
+ => deduct money from account
 
 acc.statement
 Date || Credit || Debit || Balance
 14/01/2019 || 137 || 0 || 751 ||
 14/01/2019 || 0 || 888 || 888 ||
-
+```
 
 ## Screenshot
 
