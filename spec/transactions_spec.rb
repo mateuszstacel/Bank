@@ -32,7 +32,7 @@ require 'transactions'
    describe '#transactions_statement' do
      it 'should print out statement' do
        subject.add(0, 20, 20)
-       expect { subject.transactions_statement }.to output("Date || Credit || Debit || Balance\n14/01/2019 || 0 || 20 || 20 || \n").to_stdout
+       expect { subject.transactions_statement }.to output("Date || Credit || Debit || Balance\n15/01/2019 || 0 || 20 || 20 || \n").to_stdout
      end
    end
  end
