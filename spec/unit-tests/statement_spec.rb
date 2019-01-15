@@ -33,9 +33,9 @@ describe Statement do
   describe '#transactions_statement' do
     it 'should print out statement' do
       date = Time.utc(2017, 10, 21)
-      date = date.strftime("%d/%m/%Y")
+      date = date.strftime('%d/%m/%Y')
       statement.add(date, 0, 20, 20)
-      expect { statement.transactions_statement }.to output("Date || Credit || Debit || Balance\n21/10/2017 || 0 || 20 || 20\n").to_stdout
+      expect { statement.transactions_statement }.to output('Date || Credit || Debit || Balance\n21/10/2017 || 0 || 20 || 20\n').to_stdout
     end
   end
 end

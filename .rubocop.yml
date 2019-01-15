@@ -1,0 +1,14 @@
+Metrics/LineLength:
+  Max: 139
+Metrics/ModuleLength:
+  Exclude:
+    - "**/*_spec.rb"
+
+Metrics/BlockLength:
+  Exclude:
+    - "**/*_spec.rb"
+Layout/SpaceAroundOperators:
+  Enabled: false
+
+Performance/TimesMap:
+  Enabled: false
