@@ -13,13 +13,9 @@ class Transactions
   end
 
   def transactions_statement
-    i = 0
-    @transactions_history = @transactions_history.reverse
     print "Date || Credit || Debit || Balance\n"
-    while i < @transactions_history.length do
-      @transactions_history[i].each { |x| print x.to_s + " || " }
-      print "\n"
-      i += 1
+    @transactions_history.reverse.each do |x|
+      print  "#{x[0]} || #{x[1]} ||#{x[2]} ||#{x[3]}\n"
     end
   end
 end
