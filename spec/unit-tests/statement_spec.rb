@@ -1,8 +1,6 @@
 require 'statement'
-
- describe Statement do
-
-   subject(:statement) { Statement.new }
+describe Statement do
+  subject(:statement) { Statement.new }
 
   describe '#transactions_history' do
     it { is_expected.to respond_to :statement }

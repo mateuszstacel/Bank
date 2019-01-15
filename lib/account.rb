@@ -3,12 +3,10 @@ require_relative 'statement.rb'
 require 'date'
 # account
 class Account
-
   def initialize(transaction = Transactions.new, statement = Statement.new)
     @statement = statement
     @transaction = transaction
   end
-
 
   def top_up(amount)
     date = Time.now.strftime('%d/%m/%Y')

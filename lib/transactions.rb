@@ -1,6 +1,5 @@
 # transactions
 class Transactions
-
   attr_reader :balance
 
   def initialize
