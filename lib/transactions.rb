@@ -15,7 +15,7 @@ class Transactions
   def transactions_statement
     print "Date || Credit || Debit || Balance\n"
     @transactions_history.reverse.each do |x|
-      print  "#{x[0]} || #{x[1]} ||#{x[2]} ||#{x[3]}\n"
+      print  "#{x[0]} || #{x[1]} || #{x[2]} || #{x[3]}\n"
     end
   end
 end

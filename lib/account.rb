@@ -8,6 +8,10 @@ class Account
     @transaction = transaction
   end
 
+  def balance
+    @balance
+  end
+
   def top_up(amount)
     date = Time.now.strftime('%d/%m/%Y')
     @balance += amount

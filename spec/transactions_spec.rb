@@ -35,7 +35,7 @@ require 'transactions'
        date = Time.utc(2017, 10, 21)
        date = date.strftime("%d/%m/%Y")
        subject.add(date, 0, 20, 20)
-       expect { subject.transactions_statement }.to output("Date || Credit || Debit || Balance\n21/10/2017 || 0 || 20 || 20 || \n").to_stdout
+       expect { subject.transactions_statement }.to output("Date || Credit || Debit || Balance\n21/10/2017 || 0 || 20 || 20\n").to_stdout
      end
    end
  end
