@@ -41,7 +41,10 @@ $ bundle install
 ```
 rspec
 ```
-
+### To run linting:
+```
+rubocop
+```
 
 ### To run the app in IRB:
 
