@@ -2,26 +2,26 @@ require_relative 'transactions.rb'
 require 'date'
 # account
 class Account
-  attr_reader :balance
 
-  def initialize(transaction = Transactions.new, date = Time.now)
+  def initialize(transaction = Transactions.new)
     @balance = 0
     @transaction = transaction
-    @date = date.strftime('%d/%m/%Y')
   end
 
   def top_up(amount)
+    date = Time.now.strftime('%d/%m/%Y')
     @balance += amount
     withdraw = ''
-    @transaction.add(@date, withdraw, amount, @balance)
+    @transaction.add(date, withdraw, amount, @balance)
   end
 
   def withdraw(amount)
     raise 'Not enough funds!' if amount > @balance
 
+    date = Time.now.strftime('%d/%m/%Y')
     @balance -= amount
     top_up = ''
-    @transaction.add(@date, amount, top_up, @balance)
+    @transaction.add(date, amount, top_up, @balance)
   end
 
   def statement

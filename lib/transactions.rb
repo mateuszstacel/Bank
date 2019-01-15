@@ -4,8 +4,7 @@ class Transactions
 
   attr_reader :transactions_history
 
-  def initialize(date = Time.now)
-    @date = date.strftime('%d/%m/%Y')
+  def initialize
     @transactions_history = []
   end
 
