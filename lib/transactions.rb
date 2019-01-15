@@ -5,13 +5,12 @@ class Transactions
   attr_reader :transactions_history
 
 
-  def initialize(date = Time.now)
-    @date = date.strftime("%d/%m/%Y")
+  def initialize
     @transactions_history = []
   end
 
-  def add(withdraw, top_up, balance)
-    @transactions_history.push([@date, withdraw, top_up, balance])
+  def add(date, withdraw, top_up, balance)
+    @transactions_history.push([date, withdraw, top_up, balance])
   end
 
   def transactions_statement
