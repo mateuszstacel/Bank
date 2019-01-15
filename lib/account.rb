@@ -1,34 +1,32 @@
 require_relative 'transactions.rb'
+require_relative 'statement.rb'
 require 'date'
 # account
 class Account
 
-  def initialize(transaction = Transactions.new)
-    @balance = 0
+  def initialize(transaction = Transactions.new, statement = Statement.new)
+    @statement = statement
     @transaction = transaction
   end
 
-  def balance
-    @balance
-  end
 
   def top_up(amount)
     date = Time.now.strftime('%d/%m/%Y')
-    @balance += amount
+    @transaction.credit(amount)
     withdraw = ''
-    @transaction.add(date, withdraw, amount, @balance)
+    @statement.add(date, withdraw, amount, @transaction.balance)
   end
 
   def withdraw(amount)
-    raise 'Not enough funds!' if amount > @balance
+    raise 'Not enough funds!' if amount > @transaction.balance
 
     date = Time.now.strftime('%d/%m/%Y')
-    @balance -= amount
+    @transaction.debit(amount)
     top_up = ''
-    @transaction.add(date, amount, top_up, @balance)
+    @statement.add(date, amount, top_up, @transaction.balance)
   end
 
   def statement
-    @transaction.transactions_statement
+    @statement.transactions_statement
   end
 end

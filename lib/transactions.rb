@@ -1,21 +1,17 @@
-require 'date'
 # transactions
 class Transactions
 
-  attr_reader :transactions_history
+  attr_reader :balance
 
   def initialize
-    @transactions_history = []
+    @balance = 0
   end
 
-  def add(date, withdraw, top_up, balance)
-    @transactions_history.push([date, withdraw, top_up, balance])
+  def credit(amount)
+    @balance += amount
   end
 
-  def transactions_statement
-    print "Date || Credit || Debit || Balance\n"
-    @transactions_history.reverse.each do |x|
-      print  "#{x[0]} || #{x[1]} || #{x[2]} || #{x[3]}\n"
-    end
+  def debit(amount)
+    @balance -= amount
   end
 end
