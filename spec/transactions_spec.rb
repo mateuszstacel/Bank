@@ -2,10 +2,8 @@ require 'transactions'
 
  describe Transactions do
 
-   date = Time.utc(2017, 10, 21)
-
    describe '#transactions_history' do
-     it { is_expected.to respond_to :transactions_history}
+     it { is_expected.to respond_to :transactions_history }
 
      it 'expect transactions_history to be array' do
        expect(subject.transactions_history).to eq []
@@ -16,7 +14,7 @@ require 'transactions'
      end
 
      it 'expect transactions_history not to be empty' do
-       past = Time.utc(2017, 10, 21)
+       date = Time.utc(2017, 10, 21)
        subject.add(date, 0, 30, 30)
        expect(subject.transactions_history).not_to be_empty
      end
@@ -26,7 +24,6 @@ require 'transactions'
      it { is_expected.to respond_to(:add).with(4).argument }
 
      it 'saves multiple transactions into the array' do
-       past = Time.utc(2017, 10, 21)
        subject.add(3/2/2001, 0, 20, 20)
        subject.add(3/2/2001, 0, 30, 50)
        expect(subject.transactions_history.length).to eq 2

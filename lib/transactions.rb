@@ -1,11 +1,11 @@
 require 'date'
-
+# transactions
 class Transactions
 
   attr_reader :transactions_history
 
-
-  def initialize
+  def initialize(date = Time.now)
+    @date = date.strftime('%d/%m/%Y')
     @transactions_history = []
   end
 
@@ -22,7 +22,5 @@ class Transactions
       print "\n"
       i += 1
     end
-
   end
-
 end

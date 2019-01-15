@@ -1,14 +1,12 @@
 require 'account'
-
 describe Account do
 
   describe '#balance' do
-    it { is_expected.to respond_to :balance}
+    it { is_expected.to respond_to :balance }
 
     it 'starting balance should be 0' do
       expect(subject.balance).to eq 0
     end
-
   end
 
   describe '#top_up' do
@@ -18,7 +16,6 @@ describe Account do
       subject.top_up(100)
       expect(subject.balance).to eq 100
     end
-
   end
 
   describe '#withdraw' do
