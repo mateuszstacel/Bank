@@ -12,7 +12,7 @@ class Account
     date = Time.now.strftime('%d/%m/%Y')
     @transaction.credit(amount)
     withdraw = ''
-    @statement.add(date, withdraw, amount, @transaction.balance)
+    @statement.add(date, withdraw, @transaction.format(amount), @transaction.format(@transaction.balance))
   end
 
   def withdraw(amount)
@@ -21,10 +21,11 @@ class Account
     date = Time.now.strftime('%d/%m/%Y')
     @transaction.debit(amount)
     top_up = ''
-    @statement.add(date, amount, top_up, @transaction.balance)
+    @statement.add(date, @transaction.format(amount), top_up, @transaction.format(@transaction.balance))
   end
 
   def statement
     @statement.transactions_statement
   end
+  
 end
