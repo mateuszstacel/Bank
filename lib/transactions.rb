@@ -14,8 +14,4 @@ class Transactions
     @balance -= amount
   end
 
-  def format(amount)
-    '%.2f' % amount
-  end
-
 end

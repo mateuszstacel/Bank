@@ -1,7 +1,7 @@
 require 'account'
 describe Account do
   let(:transaction) { double :transaction, credit: true, debit: true, balance: 20 }
-  let(:statement) { double :statement }
+  let(:statement) { double :statement, statement_format: 20 }
   subject(:account) { Account.new(transaction, statement) }
 
   describe '#top_up' do

@@ -1,6 +1,6 @@
 # statement
 class Statement
-  attr_reader :statement
+
 
   def initialize
     @statement = []
@@ -16,4 +16,13 @@ class Statement
       print "#{x[0]} || #{x[1]} || #{x[2]} || #{x[3]}\n"
     end
   end
+
+  def statement_format(amount)
+    '%.2f' % amount
+  end
+
+  def statement
+    @statement
+  end
+
 end
