@@ -13,5 +13,4 @@ class Transactions
   def debit(amount)
     @balance -= amount
   end
-
 end

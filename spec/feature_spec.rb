@@ -3,9 +3,7 @@ require 'account'
 require 'transactions'
 require 'statement'
 
-
 describe Account do
-
   let(:account) { Account.new }
 
   describe '#statement' do

@@ -27,5 +27,4 @@ class Account
   def statement
     @statement.transactions_statement
   end
-
 end

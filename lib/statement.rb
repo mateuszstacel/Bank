@@ -1,7 +1,6 @@
 # statement
 class Statement
-
-
+  attr_reader :statement
   def initialize
     @statement = []
   end
@@ -20,9 +19,4 @@ class Statement
   def statement_format(amount)
     '%.2f' % amount
   end
-
-  def statement
-    @statement
-  end
-
 end
