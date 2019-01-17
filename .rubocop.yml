@@ -12,3 +12,5 @@ Layout/SpaceAroundOperators:
 
 Performance/TimesMap:
   Enabled: false
+  Style/GuardClause:
+    Enabled: false

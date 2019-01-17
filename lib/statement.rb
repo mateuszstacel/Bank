@@ -19,8 +19,8 @@ class Statement
 private
 
   def statement_format(amount)
-    if amount == ""
-      return ""
+    if amount == ''
+      return ''
     else
     '%.2f' % amount
     end
